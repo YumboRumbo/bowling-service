@@ -1,0 +1,13 @@
+type Game {
+  id: ID! @unique
+  frames: [Frame!]
+}
+
+type Frame {
+  rolls: [Roll!]!
+  frameScore: Int!
+}
+
+type Roll {
+  score: Int!
+}

@@ -1,0 +1,13 @@
+# import Game from "./generated/prisma.graphql"
+# import Frame from "./generated/prisma.graphql"
+# import Roll from "./generated/prisma.graphql"
+
+type Query {
+  info: String!
+  games: [Game!]!
+  game(id: ID!): Game
+}
+
+type Mutation {
+  addGame(frames: [Frame!]!): Game!
+}

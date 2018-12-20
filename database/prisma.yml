@@ -1,0 +1,13 @@
+# The HTTP endpoint for your Prisma API
+endpoint: https://us1.prisma.sh/justin-yum-a90f29/bowling-service/dev
+
+# Points to the file that holds your data model
+datamodel: datamodel.graphql
+
+# Deploy hook
+hooks:
+  post-deploy:
+    - graphql get-schema --project database
+
+# You can only access the API when providing JWTs that are signed with this secret
+secret: mysecret123

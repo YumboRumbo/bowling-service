@@ -1,0 +1,26 @@
+{
+  "name": "bowling-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YumboRumbo/bowling-service.git"
+  },
+  "author": "Justin Yum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YumboRumbo/bowling-service/issues"
+  },
+  "homepage": "https://github.com/YumboRumbo/bowling-service#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.0.2",
+    "graphql-yoga": "^1.16.7",
+    "prisma-binding": "^2.2.11"
+  }
+}
