@@ -1,18 +1,18 @@
 export default `
 type Game {
-  id: ID!
+  id: String!
   author: String!
   description: String!
 }
 
 type Query {
-  game(id: ID!): Game!
+  game(id: String!): Game!
   games: [Game!]!
 }
 
 type Mutation {
   createGame(game: CreateGameInput): Game!
-  deleteGame(id: ID!): Game!
+  deleteGame(id: String!): Game!
 }
 
 input CreateGameInput {
