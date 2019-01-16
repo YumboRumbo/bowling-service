@@ -6,16 +6,24 @@ const GameSchema = new Schema({
   id: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
-  author: {
-    type: String,
-    required: true
+  rollScores: {
+    type: [[Number]],
+    required: true,
   },
-  description: {
-    type: String,
-    required: true
-  }
+  currentFrame: {
+    type: Number,
+    required: true,
+  },
+  frameScores: {
+    type: [Number],
+    required: true,
+  },
+  gameOver: {
+    type: Boolean,
+    required: true,
+  },
 });
 
 const Game = mongoose.model("Game", GameSchema);

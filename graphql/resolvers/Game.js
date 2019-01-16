@@ -3,9 +3,9 @@ import * as uuid from "uuid";
 
 export default {
   Query: {
-    game: (root, args) => {
+    game: (root, {id}) => {
       return new Promise((resolve, reject) => {
-        Game.findOne(args).exec((err, res) => {
+        Game.findOne(id).exec((err, res) => {
           err ? reject(err) : resolve(res);
         })
       }) 
@@ -22,9 +22,9 @@ export default {
   },
   Mutation: {
     createGame: (root, {game}) => {
-      const { author, description} = game
+      const { rollScores, currentFrame, frameScores, gameOver } = game
       const id = uuid.v4();
-      const newGame = new Game({id, author, description});
+      const newGame = new Game({id, rollScores, currentFrame, frameScores, gameOver});
 
       return new Promise((resolve, reject) => {
         newGame.save((err, res) => {

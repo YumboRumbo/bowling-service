@@ -1,8 +1,10 @@
 export default `
 type Game {
   id: String!
-  author: String!
-  description: String!
+  rollScores: [[Int!]!]!
+  currentFrame: Int!
+  frameScores: [Int!]!
+  gameOver: Boolean!
 }
 
 type Query {
@@ -16,7 +18,9 @@ type Mutation {
 }
 
 input CreateGameInput {
-  author: String!
-  description: String!
+  rollScores: [[Int!]!]!
+  currentFrame: Int!
+  frameScores: [Int!]!
+  gameOver: Boolean!
 }
 `;
