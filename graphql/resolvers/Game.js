@@ -22,9 +22,9 @@ export default {
   },
   Mutation: {
     createGame: (root, {game}) => {
-      const { rollScores, currentFrame, frameScores, gameOver } = game
+      const { creator, rollScores, currentFrame, frameScores, gameOver } = game
       const id = uuid.v4();
-      const newGame = new Game({id, rollScores, currentFrame, frameScores, gameOver});
+      const newGame = new Game({id, creator, rollScores, currentFrame, frameScores, gameOver});
 
       return new Promise((resolve, reject) => {
         newGame.save((err, res) => {

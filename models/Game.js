@@ -8,6 +8,10 @@ const GameSchema = new Schema({
     required: true,
     unique: true,
   },
+  creator: {
+    type: String,
+    required: true
+  },
   rollScores: {
     type: [[Number]],
     required: true,

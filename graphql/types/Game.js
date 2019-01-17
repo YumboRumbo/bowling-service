@@ -1,6 +1,7 @@
 export default `
 type Game {
   id: String!
+  creator: String!
   rollScores: [[Int!]!]!
   currentFrame: Int!
   frameScores: [Int!]!
@@ -18,6 +19,7 @@ type Mutation {
 }
 
 input CreateGameInput {
+  creator: String!
   rollScores: [[Int!]!]!
   currentFrame: Int!
   frameScores: [Int!]!
